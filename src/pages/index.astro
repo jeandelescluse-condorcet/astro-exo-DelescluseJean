@@ -1,16 +1,32 @@
 ---
-
+import MainLayout from '../layouts/MainLayout.astro';
+// Importation des styles spécifiques à la page d'accueil
+import '../styles/home.css'; 
+// NOTE : Il faut créer le fichier home.css (voir 2.2)
 ---
+<MainLayout title="Accueil">
+  <div class="homepage-container">
+    
+    <div class="content-block">
+      <h1 class="name-title">JEAN DELESCLUSE</h1>
+      <p class="baseline">Votre courte phrase d'accroche soulignée ici.</p>
+      
+      <p class="intro-text">
+        Votre texte d'introduction en quelques lignes, décrivant votre profil ou votre projet.
+      </p>
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+      <div class="contact-info">
+        <a href="mailto:votre.email@mail.com">votre.email@mail.com</a>
+        <a href="tel:+33123456789">+33 1 23 45 67 89</a>
+      </div>
+    </div>
+    
+    <div class="illustration-block">
+      <div class="photo-container">
+        <img src="/image de moi compressé.jpg" alt="Photo de profil de Jean Delescluse" class="profile-photo" />
+        </div>
+    </div>
+
+  </div>
+  
+  </MainLayout>
