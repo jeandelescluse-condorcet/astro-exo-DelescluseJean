@@ -1,0 +1,15 @@
+[build]
+  # La commande pour compiler ton projet Astro
+  command = "npm run build"
+  # Le dossier où Astro place les fichiers générés
+  publish = "dist"
+
+[build.environment]
+  # Force une version de Node compatible avec Astro
+  NODE_VERSION = "20"
+
+[[redirects]]
+  # Permet de gérer la navigation entre tes pages sur Netlify
+  from = "/*"
+  to = "/index.html"
+  status = 200
