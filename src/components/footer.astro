@@ -1,0 +1,32 @@
+---
+// src/components/Footer.astro
+---
+<style>
+    .site-footer {
+        /* Positionnement fixé en bas de la fenêtre */
+        position: fixed; 
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        text-align: center;
+        padding: 10px 0; 
+        font-size: 0.75em;
+        color: #666; 
+        background-color: #F7F7F7; 
+        z-index: 99; 
+    }
+
+    .site-footer a {
+        color: inherit;
+        text-decoration: underline;
+        margin-left: 5px;
+        font-weight: 500;
+    }
+</style>
+
+<footer class="site-footer">
+    <p>
+        © 2025 Jean Delescluse. Tous droits réservés.
+        <a href="/mentions-legales">Mentions Légales</a>
+    </p>
+</footer>

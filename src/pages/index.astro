@@ -1,32 +1,51 @@
 ---
 import MainLayout from '../layouts/MainLayout.astro';
-// Importation des styles spécifiques à la page d'accueil
 import '../styles/home.css'; 
-// NOTE : Il faut créer le fichier home.css (voir 2.2)
+// L'importation du Footer n'est pas nécessaire ici, il est géré par MainLayout
 ---
 <MainLayout title="Accueil">
-  <div class="homepage-container">
+  
+  <div class="main-card">
     
+    <!-- BLOC DE GAUCHE : Contenu/Texte (60%) -->
     <div class="content-block">
+      
+      <!-- ÉLÉMENT DÉCORATIF : Cercle bleu en haut à gauche -->
+      <div class="deco-circle"></div> 
+      
       <h1 class="name-title">JEAN DELESCLUSE</h1>
-      <p class="baseline">Votre courte phrase d'accroche soulignée ici.</p>
+      <p class="baseline">Spécialisé dans la création de site web</p>
       
       <p class="intro-text">
-        Votre texte d'introduction en quelques lignes, décrivant votre profil ou votre projet.
+        Je présente ici, de manière concise, l'étendue de mes compétences. C'est un métier que j'exerce avec engagement et passion depuis de nombreuses années..
       </p>
 
       <div class="contact-info">
-        <a href="mailto:votre.email@mail.com">votre.email@mail.com</a>
-        <a href="tel:+33123456789">+33 1 23 45 67 89</a>
+        <!-- Contact Email avec icône -->
+        <a href="mailto:jeandelescluse@icloud.com" class="contact-email">
+          <span class="icon">&#9993;</span> jeandelescluse@icloud.com
+        </a>
+        
+        <!-- Contact Téléphone avec icône -->
+        <a href="tel:+33123456789" class="contact-phone">
+          <span class="icon">&#9742;</span> +33 1 23 45 67 89
+        </a>
       </div>
     </div>
     
+    <!-- BLOC DE DROITE : Illustration/Photo/Décoration (40%) -->
     <div class="illustration-block">
+      
+      <!-- ÉLÉMENT DÉCORATIF : Losange bleu en bas à droite -->
+      <div class="deco-shape"></div> 
+      
+      <!-- Conteneur de la photo pour la forme circulaire -->
       <div class="photo-container">
-        <img src="/image de moi compressé.jpg" alt="Photo de profil de Jean Delescluse" class="profile-photo" />
-        </div>
+        <img src="/photo-jean.jpg" alt="Photo de profil de Jean Delescluse" class="profile-photo" />
+      </div>
+
     </div>
 
   </div>
   
-  </MainLayout>
+</MainLayout>

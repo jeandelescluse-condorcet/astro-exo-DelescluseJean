@@ -1,20 +1,25 @@
 ---
-// Importation du CSS global
+// src/layouts/MainLayout.astro
 import '../styles/global.css'; 
-// Récupère le titre spécifique de la page (ex: "Accueil")
+import Footer from '../components/Footer.astro'; 
 const { title } = Astro.props; 
 ---
 <!DOCTYPE html>
 <html lang="fr">
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{title} | Jean Delescluse Portfolio</title>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{title}</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" />
   </head>
   <body>
+    <!-- Le contenu des pages -->
     <main>
       <slot />
     </main>
+    
+    <!-- Le footer est ici, il s'affichera sur toutes les pages utilisant ce layout -->
+    <Footer />
+    
   </body>
 </html>

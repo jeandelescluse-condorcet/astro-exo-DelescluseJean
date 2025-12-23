@@ -1,12 +1,59 @@
 ---
+// src/pages/mentions-legales.astro
 import MainLayout from '../layouts/MainLayout.astro';
 ---
 <MainLayout title="Mentions Légales">
-  <section style="padding: 40px;">
-    <h1>Mentions Légales</h1>
-    <p>Contenu à remplir.</p>
-    <p style="margin-top: 20px;">
-      <a href="/">← Retour à l'accueil</a>
-    </p>
-  </section>
+    <div class="mentions-container">
+        <h1>Mentions Légales</h1>
+        
+        <h2>1. Informations Légales</h2>
+        <p>
+            **Nom :** Jean Delescluse<br>
+            **Adresse Email :** jeandelescluse@icloud.com<br>
+            **Téléphone :** +33 1 23 45 67 89
+        </p>
+
+        <h2>2. Hébergement</h2>
+        <p>
+            Ce site est hébergé par [Nom de l'hébergeur]
+        </p>
+
+        <h2>3. Propriété Intellectuelle</h2>
+        <p>
+            L'ensemble du contenu de ce site (textes, images, vidéos, etc.) est la propriété exclusive de Jean Delescluse, sauf mention contraire.
+        </p>
+        
+        </div>
+
+    <style>
+        .mentions-container {
+            max-width: 800px;
+            width: 90%;
+            margin: 40px auto;
+            padding: 40px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        .mentions-container h1 {
+            color: #E2000F;
+            margin-bottom: 20px;
+        }
+        .mentions-container h2 {
+            margin-top: 30px;
+            color: #3366FF;
+            border-bottom: 2px solid #3366FF;
+            padding-bottom: 5px;
+        }
+        
+        /* IMPORTANT : Modifie le comportement de la balise <main> pour cette page */
+        /* Elle ne doit plus centrer la carte verticalement, mais afficher le contenu en haut. */
+        main {
+            min-height: 100vh;
+            /* Retire le centrage vertical pour cette page */
+            align-items: flex-start !important; 
+            padding-top: 40px;
+            padding-bottom: 60px; /* Espace au-dessus du footer */
+        }
+    </style>
 </MainLayout>
